@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+.poetsen-one-regular {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.carousel-item-img{
+    height: 25em;
+    object-fit: cover;
+    object-position: 0 80%;
+    opacity: 50%;
+}
+
+.carousel-caption h2 {
+    font-size: 3.5em;
+    color: rgb(112, 15, 7);
+    margin-bottom: 2em;
+}
+
+h2, h4{
+    text-align: center;
+    margin: 2em;
+}
+
+.card{
+    width: 18rem;
+    margin: 2em;
+}
+
+#main-receitas{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-img-top{
+    height: 15em;
+    object-fit: cover;
+}
