@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header class="bg-secondary text-white">
+    <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand poetsen-one-regular" href="#">Folhas do café</a>
