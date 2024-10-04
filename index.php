@@ -85,11 +85,11 @@
                                 <div class="modal-body">
                                     <form action="dto/cadastroCafe.php" method="post">
                                         <div class="mb-3">
-                                            <label for="nome" class="col-form-label">Nome:</label>
+                                            <label for="nome" class="col-form-label" style="color: black">Nome:</label>
                                             <input type="text" class="form-control" id="nome" name="nome">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="descricao" class="col-form-label">Descricao:</label>
+                                            <label for="descricao" class="col-form-label" style="color: black">Descricao:</label>
                                             <textarea class="form-control" id="descricao" name="descricao"></textarea>
                                         </div>
                                         <div class="modal-footer">
