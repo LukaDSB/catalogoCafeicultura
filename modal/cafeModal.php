@@ -33,33 +33,20 @@ class CafeModal {
         $stmt->execute();
     }
 
-    // public function cadastrarCafe($nome, $descricao) {
-    //     $sql = "INSERT INTO cafes (nome, descricao) VALUES (?, ?)";
-    //     $stmt = $this->conn->prepare($sql);
-    //     $stmt->bind_param("ss", $nome, $descricao);
-    //     $stmt->execute();
-    // }
-
     public function cadastrarCafe($nome, $descricao, $imagem) {
-        // Preparar a query de inserção
         $sql = "INSERT INTO cafes (nome, descricao, imagem) VALUES (?, ?, ?)";
     
-        // Preparar a declaração para evitar SQL Injection
         if ($stmt = $this->conn->prepare($sql)) {
-            // Vincular os parâmetros (s: string, s: string, s: string)
             $stmt->bind_param("sss", $nome, $descricao, $imagem);
-    
-            // Executar a query
             if ($stmt->execute()) {
-                return true; // Sucesso
+                return true;
             } else {
-                return false; // Falha
+                return false;
             }
     
-            // Fechar a declaração
             $stmt->close();
         } else {
-            return false; // Falha ao preparar a query
+            return false;
         }
     }
 
