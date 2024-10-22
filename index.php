@@ -1,7 +1,7 @@
 <?php
-include_once 'modal/cafeModal.php';
+include_once 'model/cafeModel.php';
 
-$db = new CafeModal();
+$db = new CafeModel();
 $tiposDeCafe = $db->getTiposDeCafe();
 $cafes = $db->getCafes();
 $db->closeConnection();
@@ -77,7 +77,7 @@ $db->closeConnection();
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="dto/cadastroCafeDto.php" method="post" enctype="multipart/form-data">
+                                    <form action="controller/cadastroCafeController.php" method="post" enctype="multipart/form-data">
                                         <div class="mb-3">
                                             <label for="nome" class="col-form-label" style="color: black">Nome:</label>
                                             <input type="text" class="form-control" id="nome" name="nome">
@@ -153,7 +153,7 @@ $db->closeConnection();
                                 <h5 class='card-title'>" . $row["nome"] . "</h5>
                                 <p class='card-text'>" . $row["descricao"] . "</p>
                                 <a href='#' class='btn btn-primary'>Ver receita</a>
-                                <a href='dto/excluirCafeDto.php?id=" . $row["idcafes"] . "' class='btn btn-danger' onclick='return confirm(\"Tem certeza que deseja excluir este item?\");'>Excluir</a>
+                                <a href='controller/excluirCafeController.php?id=" . $row["idcafes"] . "' class='btn btn-danger' onclick='return confirm(\"Tem certeza que deseja excluir este item?\");'>Excluir</a>
                             </div>
                         </div>";
                 }

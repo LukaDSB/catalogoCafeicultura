@@ -1,5 +1,5 @@
 <?php
-include_once '../modal/cafeModal.php';
+include_once '../model/cafeModel.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = $_POST['nome'];
@@ -13,9 +13,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $caminhoImagem = $diretorio . $nomeImagem;
 
         if (move_uploaded_file($_FILES['imagem']['tmp_name'], $caminhoImagem)) {
-            $cafeModal = new CafeModal();
+            $cafeModel = new CafeModel();
 
-            $result = $cafeModal->cadastrarCafe($nome, $descricao, $nomeImagem);
+            $result = $cafeModel->cadastrarCafe($nome, $descricao, $nomeImagem);
 
             if ($result) {
                 header('Location: ../index.php');
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 echo "Erro ao cadastrar café.";
             }
 
-            $cafeModal->closeConnection();
+            $cafeModel->closeConnection();
         } else {
             echo "Erro ao mover o arquivo da imagem.";
         }

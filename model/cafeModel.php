@@ -1,5 +1,5 @@
 <?php
-class CafeModal {
+class CafeModel {
     private $servername = "localhost";
     private $username = "root";
     private $password = "*Movorurari123";
@@ -31,6 +31,7 @@ class CafeModal {
         $stmt = $this->conn->prepare($sql);
         $stmt->bind_param("i", $id);
         $stmt->execute();
+        return $stmt;
     }
 
     public function cadastrarCafe($nome, $descricao, $imagem) {
